@@ -1,11 +1,17 @@
 package com.servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.util.RecordTime;
 
 /**
  * Servlet implementation class startEatServlet
@@ -39,8 +45,22 @@ public class startEatServlet extends HttpServlet {
 
 		 String id = request.getParameter("id");
 		 System.out.println("start to eating..."+id);
+		 String startTime = "";
+		 try {
+		    startTime = RecordTime.updateStartTime();
+			RecordTime.recordLog("0");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// response.sendRedirect("/index.jsp");
 	
+		 response.getWriter().write(
+				 startTime.substring(8, 10)+":"+startTime.substring(10, 12));
+		 
 	}
 
 }
