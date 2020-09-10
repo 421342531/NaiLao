@@ -10,7 +10,7 @@ public class CountTimeCross {
 		// TODO Auto-generated method stub
 
 		
-		getTimeCross("202008301030","202008301140");
+		getTimeCross("202008301030","202008301031");
 	}
 	
 	

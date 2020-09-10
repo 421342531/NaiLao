@@ -44,7 +44,7 @@ public class startEatServlet extends HttpServlet {
 		 
 
 		 String id = request.getParameter("id");
-		 System.out.println("start to eating..."+id);
+		 //System.out.println("start to eating..."+id);
 		 String startTime = "";
 		 try {
 		    startTime = RecordTime.updateStartTime();

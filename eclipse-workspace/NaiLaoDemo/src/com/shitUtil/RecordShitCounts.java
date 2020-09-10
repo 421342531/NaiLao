@@ -58,7 +58,27 @@ public class RecordShitCounts {
 					return oldTime+"";
 			}
 		}
-		
+		public static String queryShitTimes() throws ClassNotFoundException, SQLException {
+			String returnString ="0";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		 	System.out.println("Success loading Mysql Driver!");
+		 	Connection connect = DriverManager.getConnection(
+					 "jdbc:mysql://localhost:3306/mysql","root","nbcb,111");
+			Statement statement =connect.createStatement();
+			String nowDate= getNowDate();
+			System.out.println(" 当前日期是:"+nowDate);
+			//取目前次数
+			String sql_queryStartTime =
+		 			"select count from shit_count t where t.date = '"+nowDate+"'";
+			PreparedStatement pstmt = null;
+			pstmt = connect.prepareStatement(sql_queryStartTime);
+			ResultSet rs ;
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				returnString = rs.getString("count");
+			}
+			return returnString;
+		}
 		
 		public static void recordShitLog(String type) throws ClassNotFoundException, Exception {
 			Class.forName("com.mysql.cj.jdbc.Driver");
