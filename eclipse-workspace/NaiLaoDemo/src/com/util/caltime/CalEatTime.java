@@ -94,7 +94,7 @@ public class CalEatTime {
 	 			"select * "
 	 			+ " from time_control_cross "
 	 			+ " where"
-	 			+ " date ='" + getNowDate()+"' order by time_start desc" ;
+	 			+ " date ='" + getNowDate()+"' order by time_start" ;
 		PreparedStatement pstmt3 = null;
 		logger.info("sql_queryStartTime3:"+sql_queryStartTime3);
 		pstmt3 = connect3.prepareStatement(sql_queryStartTime3);
