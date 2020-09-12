@@ -1,0 +1,4 @@
+2020-09-12 19:12:08 method: com.util.caltime.CalEatTime.queryListCross(CalEatTime.java:99) - [ INFO ]----sql_queryStartTime3:select *  from time_control_cross  where date ='20200912' order by time_start desc
+2020-09-12 19:12:09 method: com.util.caltime.CalEatTime.queryListCross(CalEatTime.java:124) - [ INFO ]----jsonObject{"1":{"timeCross":"2","time_end":"202009121847","time_start":"1845"}}
+2020-09-12 19:12:09 method: com.util.caltime.CalEatTime.queryListCross(CalEatTime.java:124) - [ INFO ]----jsonObject{"1":{"timeCross":"2","time_end":"202009121847","time_start":"1845"},"2":{"timeCross":"0","time_end":"202009121844","time_start":"1844"}}
+2020-09-12 19:12:09 method: com.util.caltime.CalEatTime.main(CalEatTime.java:23) - [ INFO ]----{"1":{"timeCross":"2","time_end":"202009121847","time_start":"1845"},"2":{"timeCross":"0","time_end":"202009121844","time_start":"1844"}}

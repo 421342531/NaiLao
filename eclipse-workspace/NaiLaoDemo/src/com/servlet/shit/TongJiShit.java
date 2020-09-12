@@ -1,10 +1,9 @@
-package com.servlet;
+package com.servlet.shit;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.text.ParseException;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,20 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.alibaba.fastjson.JSON;
+import com.shitUtil.QueryDayShitTimeStampUtil;
 import com.util.RecordTime;
-import com.util.caltime.CalEatTime;
 
 /**
- * Servlet implementation class startEatServlet
+ * Servlet implementation class TongJiEat
  */
-@WebServlet("/startEatServlet")
-public class startEatServlet extends HttpServlet {
+@WebServlet("/TongJiShit")
+public class TongJiShit extends HttpServlet {
+	private static Logger logger = Logger.getLogger(TongJiShit.class);
 	private static final long serialVersionUID = 1L;
-	private static Logger logger = Logger.getLogger(startEatServlet.class); 
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public startEatServlet() {
+    public TongJiShit() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,30 +44,18 @@ public class startEatServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		 
-
-		 String id = request.getParameter("id");
-		 //System.out.println("start to eating..."+id);
-		 String startTime = "";
-		 try {
-		    startTime = RecordTime.updateStartTime();
-			RecordTime.recordLog("0");
-		
-			logger.info("startEatservlet:CalEatTime.RecordStartEatInfoCross();//用于计算吃奶间隔时间");
-			CalEatTime.RecordStartEatInfoCross();//用于计算吃奶间隔时间
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
+	    logger.info("开始处理TongJiShit");
+	    String param="";
+		try {
+			param = JSON.toJSONString(QueryDayShitTimeStampUtil.tongjiDayShitTimeStamp());
+		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// response.sendRedirect("/index.jsp");
+		logger.info("StopEatServlet 返回信息:"+param);
+		 response.getWriter().write(param);
+		return;
 	
-		 response.getWriter().write(
-				 startTime.substring(8, 10)+":"+startTime.substring(10, 12));
-		 
 	}
 
 }

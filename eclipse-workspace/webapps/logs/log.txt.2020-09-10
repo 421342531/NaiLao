@@ -1,0 +1,229 @@
+2020-09-10 11:10:46 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:38) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101110' and date = '20200910'
+2020-09-10 11:10:46 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:61) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101110','','')
+2020-09-10 11:11:22 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:38) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101111' and date = '20200910'
+2020-09-10 11:11:22 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:61) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101111','','')
+2020-09-10 11:11:31 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:38) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101111' and date = '20200910'
+2020-09-10 11:12:58 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:38) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101112' and date = '20200910'
+2020-09-10 11:12:58 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:62) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101112','','')
+2020-09-10 11:13:06 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:38) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101113' and date = '20200910'
+2020-09-10 11:13:06 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:62) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101113','','')
+2020-09-10 11:13:16 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:38) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101113' and date = '20200910'
+2020-09-10 11:13:16 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:46) - [ INFO ]----  time_control_cross表已经存在 开始时间为：202009101113 的记录
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:36) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t order by time_start desc
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:46) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:47) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:46) - [ INFO ]----cross 表中 time_start= 202009101112
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:47) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:46) - [ INFO ]----cross 表中 time_start= 202009101111
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:47) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:46) - [ INFO ]----cross 表中 time_start= 202009101110
+2020-09-10 11:19:22 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:47) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:20:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:36) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t order by time_start desc LIMIT 1 
+2020-09-10 11:20:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:46) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:20:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:47) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:21:44 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:39) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:21:44 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:49) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:21:44 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:50) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:22:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:39) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:22:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:49) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:22:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:50) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:23:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:39) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:23:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:50) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:23:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:51) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:23:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:52) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:30:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:30:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:30:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:30:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:30:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:72) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101130' where time_start = '202009101113' and date ='20200910'
+2020-09-10 11:31:12 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:31:12 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:31:12 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:31:12 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=202009101130
+2020-09-10 11:31:31 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:31:31 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:31:31 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:31:31 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=202009101130
+2020-09-10 11:31:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:31:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:31:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:31:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=202009101130
+2020-09-10 11:31:55 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:31:55 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101113
+2020-09-10 11:31:55 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:31:55 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=202009101130
+2020-09-10 11:32:31 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:32:56 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:104) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101132' and date = '20200910'
+2020-09-10 11:32:56 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:128) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101132','','')
+2020-09-10 11:33:09 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:33:09 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 11:33:09 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:33:09 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:33:09 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:72) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101133' where time_start = '202009101132' and date ='20200910'
+2020-09-10 11:33:18 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:41) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:33:18 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:53) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 11:33:18 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:33:18 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  time_end=202009101133
+2020-09-10 11:36:14 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:42) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:36:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 11:36:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:36:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:56) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:36:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:79) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101136' where time_start = '202009101132' and date ='20200910' and timeCross = '4'
+2020-09-10 11:36:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:42) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:36:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 11:36:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:36:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:56) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:36:50 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:79) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101136' where time_start = '202009101132' and date ='20200910' and timeCross = '4'
+2020-09-10 11:38:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:42) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:38:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 11:38:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:38:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:56) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:38:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:79) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101138' ,'timeCross = '6' where time_start = '202009101132' and date ='20200910'
+2020-09-10 11:38:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:42) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 11:38:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 11:38:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 11:38:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:56) - [ INFO ]----cross  表中  time_end=
+2020-09-10 11:38:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:79) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101138' ,timeCross = '6' where time_start = '202009101132' and date ='20200910'
+2020-09-10 13:27:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:42) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:27:40 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross 表中 time_start= 202009101132
+2020-09-10 13:27:40 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:27:40 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:56) - [ INFO ]----cross  表中  time_end=202009101138
+2020-09-10 13:27:54 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:110) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101327' and date = '20200910'
+2020-09-10 13:27:54 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:134) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101327','','')
+2020-09-10 13:28:01 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:110) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101328' and date = '20200910'
+2020-09-10 13:28:01 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:134) - [ INFO ]----recordLog().sql= insert into time_control_cross(date,time_start,time_end,timeCross)values('20200910','202009101328','','')
+2020-09-10 13:28:07 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:110) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101328' and date = '20200910'
+2020-09-10 13:28:07 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:118) - [ INFO ]----  time_control_cross表已经存在 开始时间为：202009101328 的记录
+2020-09-10 13:28:15 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:110) - [ INFO ]----sql_queryStartTime().sql = select date,time_start from time_control_cross t where t.time_start = '202009101328' and date = '20200910'
+2020-09-10 13:28:15 method: com.util.caltime.CalEatTime.RecordStartEatInfo(CalEatTime.java:118) - [ INFO ]----  time_control_cross表已经存在 开始时间为：202009101328 的记录
+2020-09-10 13:28:26 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:42) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:28:26 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:54) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:28:26 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:55) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:28:26 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:56) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:28:26 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:79) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101328' ,timeCross = '0' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:39:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:39:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:39:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:39:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=202009101328
+2020-09-10 13:39:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:39:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:39:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:39:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:39:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101339' ,timeCross = '11' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:39:43 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:95) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:41:06 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:41:06 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:41:06 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:41:06 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:41:06 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101341' ,timeCross = '13' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:41:06 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:95) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:42:52 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:42:52 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:42:52 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:42:52 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=202009101341
+2020-09-10 13:43:13 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:43:13 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:43:13 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:43:13 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:43:13 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101343' ,timeCross = '15' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:43:13 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:95) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:51:03 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:51:03 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:51:03 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:51:03 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=202009101343
+2020-09-10 13:51:45 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:51:45 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:51:45 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:51:45 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:51:45 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101351' ,timeCross = '23' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:51:45 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:95) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:53:53 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:53:53 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:53:53 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:53:53 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:53:53 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101353' ,timeCross = '25' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:53:53 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:54:28 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:54:28 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:54:28 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:54:28 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:54:28 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101354' ,timeCross = '26' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:54:29 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101355' ,timeCross = '27' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:55:15 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{"index":1,"time_end":"202009101355--","time_start":"202009101328"}
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101356' ,timeCross = '28' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:56:05 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{"index":1,"time_end":"202009101356","time_start":"202009101328"}
+2020-09-10 13:56:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 13:56:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 13:56:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 13:56:39 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 13:56:40 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101356' ,timeCross = '28' where time_start = '202009101328' and date ='20200910'
+2020-09-10 13:56:40 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 13:58:10 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{"index":1,"time_end":"202009101356","time_start":"202009101328"}
+2020-09-10 14:03:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 14:03:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 14:03:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 14:03:15 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=202009101356
+2020-09-10 14:03:15 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{}
+2020-09-10 14:07:34 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 14:07:34 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 14:07:34 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 14:07:34 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=202009101356
+2020-09-10 14:07:34 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{}
+2020-09-10 14:08:00 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 14:08:00 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 14:08:00 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 14:08:00 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 14:08:00 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101408' ,timeCross = '40' where time_start = '202009101328' and date ='20200910'
+2020-09-10 14:08:01 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:08:20 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{}
+2020-09-10 14:09:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 14:09:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 14:09:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 14:09:19 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=202009101408
+2020-09-10 14:09:19 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{}
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101409' ,timeCross = '41' where time_start = '202009101328' and date ='20200910'
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:101) - [ INFO ]----sql_queryStartTime3:select date,time_start,time_end,timeCross from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:124) - [ INFO ]----time:202009101328
+2020-09-10 14:09:54 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{}
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:45) - [ INFO ]----sql_queryStartTime().sql = select date,time_start ,time_end from time_control_cross t where t.date = '20200910'order by time_start desc LIMIT 1 
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:57) - [ INFO ]----cross 表中 time_start= 202009101328
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:58) - [ INFO ]----cross  表中  date=20200910
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:59) - [ INFO ]----cross  表中  time_end=
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:78) - [ INFO ]----updateStartTime() .sql=UPDATE time_control_cross set  time_end =  '202009101414' ,timeCross = '46' where time_start = '202009101328' and date ='20200910'
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:97) - [ INFO ]----sql_queryStartTime3:select *  from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.RecordEndEatInfo(CalEatTime.java:120) - [ INFO ]----time:202009101328
+2020-09-10 14:14:17 method: com.util.caltime.CalEatTime.main(CalEatTime.java:25) - [ INFO ]----{}
+2020-09-10 14:16:21 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:102) - [ INFO ]----sql_queryStartTime3:select *  from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:16:21 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:125) - [ INFO ]----time:202009101328
+2020-09-10 14:16:21 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:125) - [ INFO ]----time:202009101327
+2020-09-10 14:16:21 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:125) - [ INFO ]----time:202009101132
+2020-09-10 14:22:07 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:100) - [ INFO ]----sql_queryStartTime3:select *  from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:22:07 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:123) - [ INFO ]----time:202009101328
+2020-09-10 14:22:07 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:123) - [ INFO ]----time:202009101327
+2020-09-10 14:22:07 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:123) - [ INFO ]----time:202009101132
+2020-09-10 14:22:07 method: com.util.caltime.CalEatTime.main(CalEatTime.java:24) - [ INFO ]----{"index":5,"time_end":"202009101138","time_start":"202009101132"}
+2020-09-10 14:25:42 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:100) - [ INFO ]----sql_queryStartTime3:select *  from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:25:42 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:122) - [ INFO ]----jsonObject202009101328
+2020-09-10 14:25:42 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:122) - [ INFO ]----jsonObject202009101327
+2020-09-10 14:25:42 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:122) - [ INFO ]----jsonObject202009101132
+2020-09-10 14:25:42 method: com.util.caltime.CalEatTime.main(CalEatTime.java:24) - [ INFO ]----{"timeCross":"","time_end":"202009101138","time_start":"202009101132"}
+2020-09-10 14:33:08 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:99) - [ INFO ]----sql_queryStartTime3:select *  from time_control_cross  where date ='20200910' order by time_start desc
+2020-09-10 14:33:08 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:118) - [ INFO ]----jsonObject202009101328
+2020-09-10 14:33:08 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:118) - [ INFO ]----jsonObject202009101327
+2020-09-10 14:33:08 method: com.util.caltime.CalEatTime.queryList(CalEatTime.java:118) - [ INFO ]----jsonObject202009101132
+2020-09-10 14:33:08 method: com.util.caltime.CalEatTime.main(CalEatTime.java:23) - [ INFO ]----{"1":{"timeCross":"","time_end":"202009101414","time_start":"202009101328"},"2":{"timeCross":"","time_end":"","time_start":"202009101327"},"3":{"timeCross":"","time_end":"202009101138","time_start":"202009101132"}}

@@ -1,4 +1,4 @@
-package com.servlet;
+package com.servlet.huangdan;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -13,20 +13,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.util.RecordTime;
-import com.util.caltime.CalEatTime;
+import com.alibaba.fastjson.JSON;
+import com.servlet.StopEatServlet;
+import com.util.HuangDanUtil;
 
 /**
- * Servlet implementation class startEatServlet
+ * Servlet implementation class QueryHuangDanWeekServlet
  */
-@WebServlet("/startEatServlet")
-public class startEatServlet extends HttpServlet {
+@WebServlet("/QueryHuangDanWeekServlet")
+public class QueryHuangDanWeekServlet extends HttpServlet {
+	 private static Logger logger = Logger.getLogger(StopEatServlet.class);
 	private static final long serialVersionUID = 1L;
-	private static Logger logger = Logger.getLogger(startEatServlet.class); 
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public startEatServlet() {
+    public QueryHuangDanWeekServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,30 +45,20 @@ public class startEatServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		 
 
-		 String id = request.getParameter("id");
-		 //System.out.println("start to eating..."+id);
-		 String startTime = "";
-		 try {
-		    startTime = RecordTime.updateStartTime();
-			RecordTime.recordLog("0");
-		
-			logger.info("startEatservlet:CalEatTime.RecordStartEatInfoCross();//用于计算吃奶间隔时间");
-			CalEatTime.RecordStartEatInfoCross();//用于计算吃奶间隔时间
-		} catch (ClassNotFoundException e) {
+		ServletContext sc = getServletContext();  
+		RequestDispatcher rd = null;
+		String str="";
+		try {
+			 str = JSON.toJSONString(HuangDanUtil.queryWeekHuangDanInfo());
+			 logger.info(str);
+		} catch (ClassNotFoundException | SQLException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
-		// response.sendRedirect("/index.jsp");
-	
-		 response.getWriter().write(
-				 startTime.substring(8, 10)+":"+startTime.substring(10, 12));
-		 
+	//	request.setAttribute("data", str);
+		response.getWriter().write(str);
+		return;
 	}
 
 }

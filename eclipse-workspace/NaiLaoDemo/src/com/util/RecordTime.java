@@ -15,13 +15,10 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 public class RecordTime {
-	
-	
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		//HuangDanUtil.insertHuangDanInfo("15.42");
 		tongjiEat();
 		//	queryStartEndTime();
-		
 	}
 	
 	private static Logger logger = Logger.getLogger(RecordTime.class);
@@ -50,7 +47,6 @@ public class RecordTime {
 		String nowTime = getNowTime();
 		String sql=
 				"UPDATE time_control set time_start = "+nowTime;//"202008290001";
-		
 		logger.info("updateStartTime() .sql="+sql);
 		int rr = statement.executeUpdate(sql);// 更新成功条数 1为更新成功，0未更新
 		//System.out.println("update starttime result= "+rr);
@@ -90,7 +86,6 @@ public class RecordTime {
 			 startTime = rs.getString("time_start");
 			//System.out.println("startTime="+startTime);
 		}
-		
 		//开始时间：startTime
 		//结束时间：nowTime
 		//时间差：timeCount

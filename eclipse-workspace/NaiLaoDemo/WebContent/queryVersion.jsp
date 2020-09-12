@@ -7,12 +7,12 @@ import="java.time.Period"
 <html>
 <head>
 <meta charset="utf-8" >
-<title>奶酪成长记🧀</title>
+<title>奶酪成长记🧀 查询版</title>
 </head>
 <style>
 #bodyid
 {
-	    background-color: #ececec;
+	background: url("img/back1.jpg") no-repeat;
 }
 #startButton,#endButton,#shitButton,#huangdanButton,#nameButton,#weightButton,#refreshButton{
     width: 280px;
@@ -20,97 +20,19 @@ import="java.time.Period"
     background-color: #FF9000;
     color: #FFFFFF;
     height: 40px;
-    margin-top: 0px;
-    border-radius: 10px;
+    margin-top: 10px;
+    border-radius: 28px;
     outline: 0;
     font-size: 16px;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
 }
 
 #inputHuangDan,#getNameText{
  margin-top: 10px;
 }
-#bodyHead{
-	padding: 20px 20px 6px;
-    border: 1px solid #e1e3e4;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-    font-size: 12px;
-}
-#bodyLogo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    height: 60px;
-    background: #bdf3d4;
-    color: #282C33;
-    font-size: 14px;
-    border-bottom: 1px solid #d3d9d6;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-#logo{
-	padding: 0 24px;
-    margin-top: 0px;
-}
-#headtext{
-    margin-left: 300px; 
-    text-align: center;
-}
-#logoBig{
-	width: 290px;  
-	float: left;
-	margin-right: 50px;
-	margin-left: 10px;
-}
-#showText{
-	font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-}
-#blockChart{
-	padding: 20px 20px 6px;
-    border: 1px solid #e1e3e4;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-    font-size: 12px;
-
-}
-#blockButton{
-	padding: 10px 10px 10px;
-    border: 1px solid #e1e3e4;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-    font-size: 12px;
-
-}
-#foot{
-	position: absolute;
-    right: 0;
-    width: 100%;
-}
-#footText{
-	    margin-left: inherit;
-	    padding: 24px 0;
-	    color: #848b99;
-	    box-sizing: border-box;
-    	margin: 0;
-}
-
 
 </style>
 <body id ="bodyid" 
- onload="queryEatCross();queryShit();queryWeekHuangDan();queryShitCharts();QueryEatStartAndEndTime();queryWeight();tongjiEatTime();tongjiShitTimeStamp();">
+ onload="queryShit();queryWeekHuangDan();queryShitCharts();QueryEatStartAndEndTime();queryWeight();tongjiEatTime();tongjiShitTimeStamp();">
  
 <% String[] showDate = {"","",""};
 LocalDate today = LocalDate.now();
@@ -122,108 +44,17 @@ showDate[2] =
 		 p.getYears()+"年"+
 					p.getMonths()+"月"+
 						(p.getDays()+1)+"日";%>
-<div id="bodyLogo">
-<div id="logo">
-</div>
-<center><h1 id="showText">️️️️️️️️️我是一只小油皮～<div style="float:right;color:blue;font-size:20px;font-family:Microsoft YaHei;" onClick="showLog();" >查看日志</div></center></h1>
-</div>
 
 <br>
-<br>
-<br>
-<div id="bodyHead">
-<div id="logoBig" >
-	<img alt="" src="img/logo.PNG" width="100%;"> 
-</div>
-
-<div id="headText">
-<h1>当前时间: <input id="time" style="font-size:30px;font-family:Microsoft YaHei;" value="<%=showDate[0] %>"></h1>	
-<h1>当前日期: <input style="font-size:30px;font-family:Microsoft YaHei;" value="<%=showDate[0] %>"></h1>	
-<h1>奶酪生日: <input style="font-size:30px;font-family:Microsoft YaHei;" value="<%=showDate[1] %>"></h1>
-<h1>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄: <input style="font-size:30px;font-family:Microsoft YaHei;" value="<%=showDate[2] %>"/></h1>
-</div>
-</div>
-<br><br>	
+<h1>当前时间: <input id="time" style="font-size:30px;" value="<%=showDate[0] %>"></h1>
+<h1>当前日期: <input style="font-size:30px;" value="<%=showDate[0] %>"></h1>	
+<h1>奶酪生日: <input style="font-size:30px;" value="<%=showDate[1] %>"></h1>
+<h1>年      龄  :<input style="font-size:30px;" value="<%=showDate[2] %>"/></h1><br><br>	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="js/jquery-3.5.1.min.js"></script>
  <script src="js/echarts.min.js"></script>
 <script type="text/javascript">
 
-function  queryEatCross(){
-	//展示图表
-	$.ajax({
-		type:"post",
-		url:"${pageContext.request.contextPath }/GetEatCrossInfoServlet",
-		data:{"id":''}, 
-		success:function(data) {
-			console.log("data111:"+data);
-			if(data.length==0){
-				console.log("不需要刷新");
-				return;
-			}
-			var jsonObj = JSON.parse(data);
-			var xStr =new Array();
-			var yStr = new Array();
-			var zStr = new Array();
-			var cStr = new Array();
-				for(var key in jsonObj){
-					xStr.push(key);
-					yStr.push(jsonObj[key].time_start);//开始时间
-					zStr.push(jsonObj[key].time_end);
-					cStr.push(jsonObj[key].timeCross);//时间跨度 
-				}
-				console.log("xxx:"+xStr);
-				console.log("xStr.length:"+xStr.length);
-				console.log("yyy:"+yStr);
-				console.log("zzz:"+zStr);
-				console.log("ccc:"+cStr);
-				
-				//--mainTongjiCross
-				var dom = document.getElementById("mainTongjiCross");
-				var optionShit = {
-						title:{
-				            text:'今日累计喝奶次数:'+xStr.length+"次",
-				            left:'center',
-				            fontSize:40,
-				            fontWeight:'bold'
-				        },
-						xAxis: {
-					        type: 'category',
-					        data: yStr,
-				            name:'日期(月:日)'
-				        },
-					    yAxis: {
-					        type: 'value',
-					        name:'时长(分钟)'
-					    },
-					    series: [{
-					        data: cStr ,//[120, 200, 150, 80, 70, 110, 130],
-					        type: 'bar',
-					        itemStyle : { 
-					        	normal: {label : {show: true}},
-					        	color:function(e){
-					        		console.log("e.data:"+e.data);
-					        		if(e.data=='0'){ 
-					        			return 'red';  
-					        		}
-				            		console.log(e.data)
-				            			return '#EAF2D3';
-				            	}	
-					        },
-					        name:'臭臭次数',
-					        color:'#1276e5'
-					    }]
-				    };
-				var myChartShit = echarts.init(dom);
-				// 使用刚指定的配置项和数据显示图表。
-				myChartShit.setOption(optionShit);
-		}
-	});
-}
-
-function showLog(){
-	document.showLogForm.submit();
-}
 
 function tongjiShitTimeStamp(){
 	$.ajax({
@@ -272,15 +103,14 @@ function tongjiShitTimeStamp(){
 				            symbolSize: 30
 				        }],
 				        itemStyle: {
-				        	normal: {label : {show: true}},
 			            	color:function(e){
 			            		console.log(e.data)
 			            		if(e.data == '1'){
 			            			console.log(e.data+'--red');
-			            			return '#f6941d';
+			            			return 'blue';
 			            		}else{
 			            			console.log(e.data+'--blue')
-			            			return '#e3c887';
+			            			return 'red';
 			            		}
 			            	}
 			            }
@@ -288,6 +118,7 @@ function tongjiShitTimeStamp(){
 				var myChart = echarts.init(dom);
 				// 使用刚指定的配置项和数据显示图表。
 				myChart.setOption(option);
+		
 		}
 		});
 }
@@ -342,7 +173,7 @@ function tongjiShitTimeStamp(){
 				            		console.log(e.data)
 				            		if(e.data == '1'){
 				            			console.log(e.data+'--red');
-				            			return '#a2e1d4';
+				            			return 'red';
 				            		}else{
 				            			console.log(e.data+'--blue')
 				            			return 'blue';
@@ -360,7 +191,13 @@ function tongjiShitTimeStamp(){
 	
 	var ajax;
 	function refresh(){
-		document.doBackForm.submit();
+	//	queryShit();
+		queryWeekHuangDan();
+		queryShitCharts();
+	//	QueryEatStartAndEndTime();
+		queryWeight();
+		tongjiEatTime();
+		tongjiShitTimeStamp();
 	}
 	
 	function insertWeight(){
@@ -555,7 +392,7 @@ function tongjiShitTimeStamp(){
 					        type: 'bar',
 					        itemStyle : { normal: {label : {show: true}}},
 					        name:'臭臭次数',
-					        color:'#1276e5'
+					        color:'#C0C0C0'
 					    }]
 				    };
 				var myChartShit = echarts.init(domShit);
@@ -590,22 +427,9 @@ function tongjiShitTimeStamp(){
 				var endTime = jsonObj.endTime;
 				var timeCount= jsonObj.timeCount;
 				obj.innerHTML="结束喂奶🍼 "+"开始时间:"+startTime+" 结束时间:"+endTime+" 吃奶用时:"+timeCount+"分钟";
-				EndEatCrossFunc();//先结束吃奶-记录cross表
-				queryEatCross();//展示图表
 			}
 		});
 	}
-	function EndEatCrossFunc(){
-		 $.ajax({
-				type:"post",
-				url:"${pageContext.request.contextPath }/EndEatCrossServlet",
-				data:{"id":'999'}, 
-				success:function(data) {
-					return;
-				}
-			});
-	}	
-	
 	function datetime() {
 	 	var now = new Date();
 	 	document.getElementById("time").value = now.getFullYear() + "-"
@@ -647,9 +471,6 @@ function tongjiShitTimeStamp(){
 				}
 			});
 	 }
-	 function queryHuangDan(){
-			document.queryHuangDanForm.submit();
-		}
 	 function queryShit(){
 		 $.ajax({
 				type:"post",
@@ -673,105 +494,20 @@ function tongjiShitTimeStamp(){
 	 }
 </script>
 	<center>
-	<div id="blockChart" style="display:none;">
-		<h1 id = "showText" > 今日喂奶🍼时间点统计</h1>
-		<div id  ="mainTongjiEat" style="height:500px;width:100%;font-size:30px;" > </div>
-	</div>
-	</center>
-	<center>
-	<div id="blockChart">
-		<h1 id = "showText" > 🍼🍼🍼统计</h1>
-		<div id  ="mainTongjiCross" style="height:500px;width:100%;font-size:30px;" > </div>
-	</div>
-	</center>
-	<br>
-	<div id="blockButton">
-	<button id="startButton" style="height:100px;width:100%;font-size:40px;"
-			 onClick="startEating(this)">
-		<div id="showText1"  style="font-size:30px;">开始喂奶🍼
-		</div>
-	</button>
-	</div>
-	<br>
-	<div id="blockButton">
-	<button id="endButton" style="height:100px;width:100%;font-size:40px;" 
-				onClick="endEatting(this)"  >
-		<div id="showText2" style="font-size:30px;" >结束喂奶🍼
-		</div>
-	</button>
-	</div>
-	<br>
-	<div id="blockButton">
-	<button id = "shitButton" type="button" onClick="shitPlus(this)" 
-						style="width: 100%;height:100px;font-size:40px;">	
-		<div id="showText3" style="font-size:40px;" >又来一次臭臭💩
-		</div>
-	</button>
-	</div>
-	
-	<br>
-	
-	<div id="blockButton">
-	<button id ="huangdanButton" type="button" onClick="insertHuangDan()" 
-						style="width: 60%;height:100px;font-size:40px;">点击录入	</button>
-						<input  placeholder="请输入今日黄疸值" id="inputHuangDan"
-		 style="width:30%;height:100px;font-size:30px;" />	
-	</div>
-	<br>
-	<div id="blockButton">
-	<button id ="weightButton" type="button" onClick="insertWeight()" 
-						style="width: 60%;height:100px;font-size:40px;">点击录入体重</button>
-						<input  placeholder="请输入今日体重值(KG)" id="inputWeight"
-		 style="width:30%;height:100px;font-size:30px;" />	
-		 </div>
-	<br>	 
-    <div id="blockButton">
-	<button id ="nameButton"  type="button" onClick="getName()"
-						style="width: 60%;height:100px;font-size:40px;" >点击随机生成奶酪名字</button>
-   <input id="getNameText" style="width:30%;height:100px;font-size:30px;" />	<br><br	>	
-	</div>
-	<br>
-	<div id="blockButton">
 	<button id ="refreshButton"  type="button" onClick="refresh()"
 						style="width: 100%;height:100px;font-size:40px;" >刷新</button>
-	</div>
- 	<br>
-	<center>
-	<div id="blockChart">
-		<h1 id="showText">今日臭臭💩时间点统计</h1>
-		<div id  ="mainShitTimeStamp" style="height:500px;width:100%;font-size:30px;" > </div>
-	</div>
-	<br>
-	<div id="blockChart">
-		<h1 id ="showText">黄疸值日趋势</h1>
-		<div id  ="main" style="height:500px;width:100%;font-size:30px;" > </div>
-	</div>
-	<br>
-	<div id="blockChart">
-		<h1 id ="showText" >体重趋势(kg)</h1>
-		<div id  ="mainWeight" style="height:500px;width:100%;font-size:30px;" > </div>
-	</div>
-	<br>
-	<div id="blockChart">
-		<h1 id="showText" >每日臭臭次数统计</h1>
-		<div id  ="mainShit" style="height:500px;width:100%;font-size:30px;" > </div>
-	</div>
-		</center>
-
-<footer id="foot">
-	<center>
-		<div id="footText" > ©2020 Product For🧀️ </div>
+	<h1 id = "showText"> 今日喂奶🍼时间点统计</h1>
+		<div id  ="mainTongjiEat" style="height:500px;width:100%;font-size:30px;" > </div>
+ <br><br>
+	<h1>黄疸值日趋势</h1>
+	<div id  ="main" style="height:500px;width:100%;font-size:30px;" > </div>
+	<h1>体重趋势(kg)</h1>
+	<div id  ="mainWeight" style="height:500px;width:100%;font-size:30px;" > </div>
+	<h1>每日臭臭次数统计</h1>
+	<div id  ="mainShit" style="height:500px;width:100%;font-size:30px;" > </div>
+	<h1>今日臭臭💩时间点统计</h1>
+	<div id  ="mainShitTimeStamp" style="height:500px;width:100%;font-size:30px;" > </div>
 	</center>
-</footer>
-<form name = "queryHuangDanForm" class="form-signin" 
-	role="form" method="post" action="QueryHuangDanHist">
-</form>
-<form name = "doBackForm" class="form-signin" 
-	role="form" method="post" action="IndexServlet">
-</form>
-<form name = "showLogForm" class="form-signin" 
-	role="form" method="post" action="showLogServlet">
-</form>
 
 <script>
 </script>

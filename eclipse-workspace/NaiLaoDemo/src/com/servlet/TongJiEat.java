@@ -3,8 +3,6 @@ package com.servlet;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,22 +13,20 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
-import com.util.HuangDanUtil;
 import com.util.RecordTime;
-import com.util.caltime.CalEatTime;
 
 /**
- * Servlet implementation class endEatServlet
+ * Servlet implementation class TongJiEat
  */
-@WebServlet("/StopEatServlet")
-public class StopEatServlet extends HttpServlet {
-	 private static Logger logger = Logger.getLogger(StopEatServlet.class);
+@WebServlet("/TongJiEat")
+public class TongJiEat extends HttpServlet {
+	private static Logger logger = Logger.getLogger(TongJiEat.class);
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StopEatServlet() {
+    public TongJiEat() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,46 +36,25 @@ public class StopEatServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 try {
-				RecordTime.recordLog("1");
-			
-			} catch (ClassNotFoundException | SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    String param="";
-			try {
-				param = JSON.toJSONString(RecordTime.updateEndTime());
-			} catch (ClassNotFoundException | SQLException | ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			 response.getWriter().write(param);
-			return;
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		 try {
-			 logger.info("开始处理stopservlet");
-			RecordTime.recordLog("1");
-		
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	    logger.info("开始处理TongJiEat");
 	    String param="";
 		try {
-			param = JSON.toJSONString(RecordTime.updateEndTime());
+			param = JSON.toJSONString(RecordTime.tongjiEat());
 			logger.info("StopEatServlet 返回信息:"+param);
-		} catch (ClassNotFoundException | SQLException | ParseException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 response.getWriter().write(param);
 		return;
+	
 	}
+
 }

@@ -1,0 +1,12 @@
+2020-09-07 17:34:24 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:141) - [ INFO ]----time_start=202009050724｜time_end=202009050726
+2020-09-07 17:35:47 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:142) - [ INFO ]----time_start=0724｜time_end=202009050726
+2020-09-07 17:37:09 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:144) - [ INFO ]----time_start=0724｜time_end=202009050726
+2020-09-07 17:37:32 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:144) - [ INFO ]----07:4
+2020-09-07 17:37:52 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:144) - [ INFO ]----time_start=0724｜time_end=202009050726
+2020-09-07 17:38:19 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:144) - [ INFO ]----time=07:24time_start=0724｜time_end=202009050726
+2020-09-07 17:38:29 method: com.util.RecordTime.queryStartEndTime(RecordTime.java:144) - [ INFO ]----time=07:24|time_start=0724｜time_end=202009050726
+2020-09-07 17:52:37 method: com.util.WeightUtil.recordWeightInfo(WeightUtil.java:36) - [ INFO ]----sql.sql_query = select count from weight_data t where t.date = '20200907'
+2020-09-07 17:52:37 method: com.util.WeightUtil.recordWeightInfo(WeightUtil.java:48) - [ INFO ]----无数据，需要插入数据
+2020-09-07 20:03:17 method: com.util.WeightUtil.recordWeightInfo(WeightUtil.java:36) - [ INFO ]----sql.sql_query = select count from weight_data t where t.date = '20200907'
+2020-09-07 20:03:17 method: com.util.WeightUtil.recordWeightInfo(WeightUtil.java:48) - [ INFO ]----无数据，需要插入数据
+2020-09-07 20:03:17 method: com.util.WeightUtil.recordWeightInfo(WeightUtil.java:59) - [ INFO ]----insert.sql= insert into weight_data(date,count)values('20200907','10')

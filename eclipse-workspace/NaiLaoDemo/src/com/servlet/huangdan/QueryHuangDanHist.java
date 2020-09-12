@@ -1,0 +1,69 @@
+package com.servlet.huangdan;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.util.HuangDanUtil;
+
+
+/**
+ * Servlet implementation class QueryHuangDanHist
+ */
+@WebServlet("/QueryHuangDanHist")
+public class QueryHuangDanHist extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public QueryHuangDanHist() { 
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ServletContext sc = getServletContext();  
+		RequestDispatcher rd = null;   
+		try {
+			request.setAttribute("data", 
+					HuangDanUtil.queryHuangDanInfo()); 
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}//进价统计
+		rd = sc.getRequestDispatcher("/huangDanShow.jsp"); //定向的页面   
+		rd.forward(request, response);
+		return;
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		ServletContext sc = getServletContext();  
+		RequestDispatcher rd = null;   
+		try {
+			request.setAttribute("data", 
+					HuangDanUtil.queryHuangDanInfo()); 
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}//进价统计
+		rd = sc.getRequestDispatcher("/huangDanShow.jsp"); //定向的页面   
+		rd.forward(request, response);
+		return;
+	}
+
+}
