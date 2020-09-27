@@ -37,9 +37,7 @@ public class ShowLogUtli {
 		while(rs.next()) {
 			String time = rs.getString("time");
 			String type = rs.getString("type");
-		//	logger.info(time+"|"+type);
 			jsonObject.put(time, type);
-			//map.put(time, type);
 		}
 		return jsonObject;
 		

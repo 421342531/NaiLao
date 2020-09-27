@@ -1,0 +1,98 @@
+#startButton,#endButton,#peeButton,#shitButton,#huangdanButton,#nameButton,#weightButton,#refreshButton{
+    width: 280px;
+    border: none;
+    background-color: #FF9000;
+    color: #FFFFFF;
+    height: 40px;
+    margin-top: 0px;
+    border-radius: 10px;
+    outline: 0;
+    font-size: 16px;
+    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
+}
+#bodyid
+{
+	    background-color: #ececec;
+}
+
+
+#inputHuangDan,#getNameText{
+ margin-top: 10px;
+}
+#bodyHead{
+	padding: 20px 20px 6px;
+    border: 1px solid #e1e3e4;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
+    font-size: 12px;
+}
+#bodyLogo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 60px;
+    background: #bdf3d4;
+    color: #282C33;
+    font-size: 14px;
+    border-bottom: 1px solid #d3d9d6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#logo{
+	padding: 0 24px;
+    margin-top: 0px;
+}
+#headtext{
+    margin-left: 300px; 
+    text-align: center;
+}
+#logoBig{
+	width: 290px;  
+	float: left;
+	margin-right: 50px;
+	margin-left: 10px;
+}
+#showText{
+	font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
+}
+#blockChart{
+	padding: 20px 20px 6px;
+    border: 1px solid #e1e3e4;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
+    font-size: 12px;
+
+}
+#blockButton{
+	padding: 10px 10px 10px;
+    border: 1px solid #e1e3e4;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
+    font-size: 12px;
+
+}
+#foot{
+	position: absolute;
+    right: 0;
+    width: 100%;
+}
+#footText{
+	    margin-left: inherit;
+	    padding: 24px 0;
+	    color: #848b99;
+	    box-sizing: border-box;
+    	margin: 0;
+}
+

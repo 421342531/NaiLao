@@ -55,7 +55,7 @@ System.out.println("jsonObject="+jsonObject);
 	<tr id =tableThread>
 		<td >序号</td>
 		<td >时间</td>
-		<td >操作类型0:开始吃 1:结束吃 2:臭臭</td>
+		<td >操作类型0:开始吃 1:结束吃 2:臭臭 3:嘘嘘</td>
 	</tr>
 </thread>
 <% 

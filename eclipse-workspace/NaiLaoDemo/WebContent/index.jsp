@@ -7,110 +7,14 @@ import="java.time.Period"
 <html>
 <head>
 <meta charset="utf-8" >
+<link href="css/index.css" rel="stylesheet" type="text/css" />
 <title>奶酪成长记🧀</title>
 </head>
 <style>
-#bodyid
-{
-	    background-color: #ececec;
-}
-#startButton,#endButton,#shitButton,#huangdanButton,#nameButton,#weightButton,#refreshButton{
-    width: 280px;
-    border: none;
-    background-color: #FF9000;
-    color: #FFFFFF;
-    height: 40px;
-    margin-top: 0px;
-    border-radius: 10px;
-    outline: 0;
-    font-size: 16px;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-}
-
-#inputHuangDan,#getNameText{
- margin-top: 10px;
-}
-#bodyHead{
-	padding: 20px 20px 6px;
-    border: 1px solid #e1e3e4;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-    font-size: 12px;
-}
-#bodyLogo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    height: 60px;
-    background: #bdf3d4;
-    color: #282C33;
-    font-size: 14px;
-    border-bottom: 1px solid #d3d9d6;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-#logo{
-	padding: 0 24px;
-    margin-top: 0px;
-}
-#headtext{
-    margin-left: 300px; 
-    text-align: center;
-}
-#logoBig{
-	width: 290px;  
-	float: left;
-	margin-right: 50px;
-	margin-left: 10px;
-}
-#showText{
-	font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-}
-#blockChart{
-	padding: 20px 20px 6px;
-    border: 1px solid #e1e3e4;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-    font-size: 12px;
-
-}
-#blockButton{
-	padding: 10px 10px 10px;
-    border: 1px solid #e1e3e4;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-    position: relative;
-    font-family: "Microsoft Yahei", Helvetica, STHeitiSC-Light, Arial, sans-serif;
-    font-size: 12px;
-
-}
-#foot{
-	position: absolute;
-    right: 0;
-    width: 100%;
-}
-#footText{
-	    margin-left: inherit;
-	    padding: 24px 0;
-	    color: #848b99;
-	    box-sizing: border-box;
-    	margin: 0;
-}
-
 
 </style>
 <body id ="bodyid" 
- onload="queryEatCross();queryShit();queryWeekHuangDan();queryShitCharts();QueryEatStartAndEndTime();queryWeight();tongjiEatTime();tongjiShitTimeStamp();">
+ onload="queryPee();queryEatCross();queryShit();queryWeekHuangDan();queryShitCharts();QueryEatStartAndEndTime();queryWeight();tongjiEatTime();tongjiShitTimeStamp();">
  
 <% String[] showDate = {"","",""};
 LocalDate today = LocalDate.now();
@@ -190,7 +94,7 @@ function  queryEatCross(){
 						xAxis: {
 					        type: 'category',
 					        data: yStr,
-				            name:'日期(月:日)'
+				            name:'开始时间(小时:分钟)'
 				        },
 					    yAxis: {
 					        type: 'value',
@@ -529,8 +433,8 @@ function tongjiShitTimeStamp(){
 				var yStr = new Array();
 					for(var key in jsonObj){
 						xStr.push(key);
-						yStr.push(jsonObj[key]) 
-					　　}
+						yStr.push(jsonObj[key])
+					}
 					//console.log(xStr);
 					//console.log(yStr);
 				var domShit = document.getElementById("mainShit");
@@ -618,12 +522,34 @@ function tongjiShitTimeStamp(){
 	 function shitPlus(obj){
 		 $.ajax({
 				type:"post",
-				url:"${pageContext.request.contextPath }/addShitServlet",
+				url:"${pageContext.request.contextPath }/AddPeeServlet",
 				data:{"id":'999'}, 
 				success:function(data) {
 					obj.innerHTML="又来一次臭臭💩 "+"今日累计臭臭次数:"+data+"次";
 					queryShitCharts();
 					tongjiShitTimeStamp();
+				}
+			});
+	 }
+	 function peePlus(obj){
+		 $.ajax({
+				type:"post",
+				url:"${pageContext.request.contextPath }/AddPeeServlet",
+				data:{"id":'999'}, 
+				success:function(data) {
+					obj.innerHTML="又来一次嘘嘘🐦 "+"今日累计嘘嘘次数:"+data+"次";
+				//	queryShitCharts();
+				//	tongjiShitTimeStamp();
+				}
+			});
+	 }
+	 function queryPee(){
+		 $.ajax({
+				type:"post",
+				url:"${pageContext.request.contextPath }/QueryPeeServlet",
+				data:{"id":'999'}, 
+				success:function(data) {
+					document.getElementById("showTextPee").innerHTML = "又来一次嘘嘘🐦 今日累计嘘嘘次数:"+data+"次";
 				}
 			});
 	 }
@@ -708,6 +634,14 @@ function tongjiShitTimeStamp(){
 		</div>
 	</button>
 	</div>
+	<br>
+	<div id="blockButton">
+	<button id = "peeButton" type="button" onClick="peePlus(this)" 
+						style="width: 100%;height:100px;font-size:40px;">	
+		<div id="showTextPee" style="font-size:40px;" >又来一次嘘嘘🐦
+		</div>
+	</button>
+	</div>
 	
 	<br>
 	
@@ -725,12 +659,6 @@ function tongjiShitTimeStamp(){
 		 style="width:30%;height:100px;font-size:30px;" />	
 		 </div>
 	<br>	 
-    <div id="blockButton">
-	<button id ="nameButton"  type="button" onClick="getName()"
-						style="width: 60%;height:100px;font-size:40px;" >点击随机生成奶酪名字</button>
-   <input id="getNameText" style="width:30%;height:100px;font-size:30px;" />	<br><br	>	
-	</div>
-	<br>
 	<div id="blockButton">
 	<button id ="refreshButton"  type="button" onClick="refresh()"
 						style="width: 100%;height:100px;font-size:40px;" >刷新</button>
